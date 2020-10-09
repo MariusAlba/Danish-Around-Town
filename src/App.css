@@ -4,13 +4,9 @@
 }
 
 body{
-  background-image: url("/public/IMG_5899.JPG");
+  /* background-color: rebeccapurple; */
 }
 
-.IMG {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
