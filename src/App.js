@@ -1,37 +1,50 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import { Header } from "./Header";
+import { Header } from "./login";
 import { LoginForm, Password, User } from './login';
+import { CreateAccount } from './createAccount';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
 function App() {
   return (
-    <div className="container App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+    <BrowserRouter>
+      <div className="container App">
+        <header className="App-header">
 
-        <Header />
-        {/* <User />
-        <Password /> */}
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
 
-        <p>
-          {/* Edit <code>src/App.js</code> and save to reload. */}
+          {/* <Header /> */}
 
-        </p>
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </header>
-      <body>
-        <LoginForm />
-      </body>
-    </div>
+
+          {/* <User />
+          <Password /> */}
+
+          <p>
+            {/* Edit <code>src/App.js</code> and save to reload. */}
+
+          </p>
+          {/* <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a> */}
+
+        </header>
+        <body>
+        <Switch>
+
+          <Route path="/login" exact component={LoginForm}/>
+          <Route path="/createAccount" exact component={CreateAccount}/>
+
+          </Switch>
+        </body>
+      </div>
+    </BrowserRouter>
   );
 }
 

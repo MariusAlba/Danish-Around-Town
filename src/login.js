@@ -2,12 +2,13 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './App.css';
+import { Link } from 'react-router-dom';
 
 
 export const User = () => {
  return <form>
     <label>
-     <input placeholder="User" type="text" name="name" />
+       <input placeholder="User" type="text" name="name" />
     </label>
  </form>
 };
@@ -23,12 +24,16 @@ export const Password = () => {
   </form>
   <button type="button" class="btn btn-success float-left">Sign Up</button>
   <button type="button" class="btn btn-success float-right">Login</button>
+  {/* <a href="createAccount.js">Login</a> */}
 </div>
  };
 
  export const LoginForm = () => {
    return <div>
-          <Form className="mt-1">
+        <h1 className="text-center mb-5">
+            Danish Around Town
+        </h1>
+          <Form className="">
             <Form.Group controlId="formBasicEmail">
               {/* <Form.Label>Email address</Form.Label> */}
               <Form.Control type="email" placeholder="Enter email" />
@@ -49,9 +54,11 @@ export const Password = () => {
       <Button className="signUpButton" variant="success" size="lg" type="submit">
         Sign Up
       </Button>
-      <Button className="float-right logInButton" variant="success" size="lg" type="submit" >
-        Login
-      </Button>
+      <Link to="/createAccount">
+        <Button className="float-right logInButton" variant="success" size="lg" type="submit" >
+          Login
+        </Button>
+      </Link>
     </Form>
    </div>
  };
