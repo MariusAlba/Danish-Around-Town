@@ -50,15 +50,14 @@ export const Password = () => {
         <a href="" className="float-right">Forgot password?</a>
         <Form.Check type="checkbox" label="Check me out" className="ml-1" />
       </Form.Group>
-
-      <Button className="signUpButton" variant="success" size="lg" type="submit">
-        Sign Up
-      </Button>
       <Link to="/createAccount">
+        <Button className="signUpButton" variant="success" size="lg" type="submit">
+          Sign Up
+        </Button>
+      </Link>
         <Button className="float-right logInButton" variant="success" size="lg" type="submit" >
           Login
         </Button>
-      </Link>
     </Form>
    </div>
  };
