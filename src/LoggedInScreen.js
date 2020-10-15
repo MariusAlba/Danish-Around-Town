@@ -4,6 +4,11 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { firebaseAppAuth, database } from "./firebase";
 
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import './App.css';
+import { Link } from 'react-router-dom';
+
 // Name of our "collection" in Firestore
 const COLLECTION = "users";
 
@@ -72,7 +77,10 @@ export const LoggedInScreen = () => {
       <input value={bookTitle} onChange={handleBookTitleChange} />
       <button onClick={handleAddBook}>Add book</button>
       <br />
-      <button onClick={handleSignOut}>Sign out</button>
+      {/* <button onClick={handleSignOut}>Sign out</button> */}
+      <Button onClick={handleSignOut} className="logInButton" variant="success" size="lg" type="submit" >
+          Logout
+        </Button>
     </div>
   );
 };
