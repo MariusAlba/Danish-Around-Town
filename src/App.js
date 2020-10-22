@@ -42,11 +42,11 @@ function App() {
       <div className="container App">
         <header className="App-header">
         </header>
-        <body>
+
         <Switch>
 
           <Route path="/NotLoggedInScreen" exact component={NotLoggedInScreen}/>
-          <Route path="/login" exact component={LoginForm}/>
+          <Route path="/" exact component={LoginForm}/>
           <Route path="/createAccount" exact component={CreateAccount}/>
           <Route path="/LoggedInScreen" exact component={LoggedInScreen}/>
           <Route path="/AccountCreated" exact component={AccountCreated}/>
@@ -55,7 +55,7 @@ function App() {
           <Route path="/Profile" exact component={Profile}/>
 
         </Switch>
-        </body>
+
       </div>
     </BrowserRouter>
   );

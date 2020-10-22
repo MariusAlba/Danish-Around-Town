@@ -1,12 +1,12 @@
 import React from "react";
-import { firebaseAppAuth, provider } from "./firebase";
+import { firebaseAppAuth, authProvider } from "./firebase";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './App.css';
 import { Link } from 'react-router-dom';
 
 export const NotLoggedInScreen = () => {
-  const handleSignIn = () => firebaseAppAuth.signInWithPopup(provider);
+  const handleSignIn = () => firebaseAppAuth.signInWithPopup(authProvider);
 
   return (
     <div>
