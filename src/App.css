@@ -1,11 +1,12 @@
 .App {
-  text-align: center;
-
+ text-align: center;
 }
 
 body{
   margin-top: 8em;
+  /* text-align: center; */
 }
+
 span{
   color: red;
 }

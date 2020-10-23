@@ -39,7 +39,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="container App">
+
+      <div className="container">
         <header className="App-header">
         </header>
 
@@ -57,6 +58,7 @@ function App() {
         </Switch>
 
       </div>
+
     </BrowserRouter>
   );
 }
