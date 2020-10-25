@@ -19,12 +19,9 @@ export const Password = () => {
      <label>
       <input placeholder="Password" type="text" name="name" />
      </label>
-     {/* <input type="submit" value="Sign Up" />
-     <input type="submit" value="Login" /> */}
   </form>
   <button type="button" class="btn btn-success float-left">Sign Up</button>
   <button type="button" class="btn btn-success float-right">Login</button>
-  {/* <a href="createAccount.js">Login</a> */}
 </div>
  };
 
@@ -35,7 +32,6 @@ export const Password = () => {
         </h1>
           <Form className="">
             <Form.Group controlId="formBasicEmail">
-              {/* <Form.Label>Email address</Form.Label> */}
               <Form.Control type="email" placeholder="Enter email" />
               <Form.Text className="text-muted ml-1">
                 We'll never share your email with anyone else
@@ -43,7 +39,6 @@ export const Password = () => {
             </Form.Group>
 
       <Form.Group controlId="formBasicPassword">
-        {/* <Form.Label>Password</Form.Label> */}
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
       <Form.Group controlId="formBasicCheckbox">
