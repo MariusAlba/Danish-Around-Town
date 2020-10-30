@@ -23,28 +23,28 @@ export const Quiz = () => {
     <div className="row">
       <div className="col-lg-6">
         <Link to="/Menu">
-          <Button className="quizItmButton mb-5" variant="success" size="lg" type="submit">
+          <Button className="quizItmButton noHover mb-5" variant="success" size="lg" type="submit">
             Tog
           </Button>
         </Link>
       </div>
       <div className="col-lg-6 ">
         <Link to="/Menu">
-          <Button className="quizItmButton mb-5" variant="success" size="lg" type="submit">
+          <Button className="quizItmButton noHover mb-5" variant="success" size="lg" type="submit">
             Hund
           </Button>
         </Link>
       </div>
       <div className="col-lg-6">
         <Link to="/Menu">
-          <Button className="quizItmButton mb-5" variant="success" size="lg" type="submit">
+          <Button className="quizItmButton noHover mb-5" variant="success" size="lg" type="submit">
             Hus
           </Button>
         </Link>
       </div>
       <div className="col-lg-6">
         <Link to="/Menu">
-          <Button className="quizItmButton mb-5" variant="success" size="lg" type="submit">
+          <Button className="quizItmButton noHover mb-5" variant="success" size="lg" type="submit">
             Vand
           </Button>
         </Link>
