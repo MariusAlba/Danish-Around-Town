@@ -52,3 +52,14 @@ span{
     transform: rotate(360deg);
   }
 }
+
+.quizItmButton{
+  color: rgb(255, 255, 255);
+  background-color: rgb(78, 72, 231, 1);
+  border-radius: 1rem;
+  width: 20ch;
+  height: 15ch;
+  left: 20ch;
+  top: 15ch;
+
+}

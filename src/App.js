@@ -10,6 +10,7 @@ import { Menu } from './Menu';
 import { Profile } from './Profile';
 import { ReactFirebaseFileUpload } from './UploadImg';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Quiz } from './Quiz';
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { firebaseAppAuth } from "./firebase";
@@ -56,6 +57,7 @@ function App() {
           <Route path="/Menu" exact component={Menu}/>
           <Route path="/Profile" exact component={Profile}/>
           <Route path="/UploadImg" exact component={ReactFirebaseFileUpload}/>
+          <Route path="/Quiz" exact component={Quiz}/>
 
         </Switch>
 
