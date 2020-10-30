@@ -1,6 +1,6 @@
 # Danish-Around-Town
 
-## Group 11 Students: Ioan Marius Alba, Aiza Omar, Terry Kuo, Yanjun Yin
+## Group 11 Students: Ioan Marius Alba, Aiza Omar, Ting-Yu Kuo, Yanjun Yin
 ### University project using ReactJS, Firebase, Bootstrap
 
 ### Purpose 
