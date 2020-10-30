@@ -19,7 +19,7 @@ export const Quiz = () => {
       <path fillRule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
     </svg>
     </Link>
-    <h2> A progress bar here... </h2>
+    <h1> Dog </h1>
     <div className="row">
       <div className="col-lg-6">
         <Link to="/Menu">
