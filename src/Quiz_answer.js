@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import './App.css';
 import { Link } from 'react-router-dom';
 
-export const Quiz = () => {
+export const Quiz_answer = () => {
   return <div className="App">
     <Link to='/Menu'>
       <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle-fill backArrow" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -22,29 +22,29 @@ export const Quiz = () => {
     <h1> Which one is <span class="quiz-item">Dog</span>?</h1>
     <div className="row">
       <div className="col-lg-6">
-        <Link to="/Quiz_answer">
-          <Button className="quizItmButton mb-5" variant="success" size="lg" type="submit">
+        <Link to="">
+          <Button className="quizItmButton noHover mb-5" variant="success" size="lg" type="submit">
             <span class="quiz-answer">Tog</span>
           </Button>
         </Link>
       </div>
       <div className="col-lg-6 ">
-        <Link to="/Quiz_answer">
-          <Button className="quizItmButton mb-5" variant="success" size="lg" type="submit">
+        <Link to="">
+          <Button className="quizAnswerButton noHover mb-5" variant="success" size="lg" type="submit">
           <span class="quiz-answer">Hund</span>
           </Button>
         </Link>
       </div>
       <div className="col-lg-6">
-        <Link to="/Quiz_answer">
-          <Button className="quizItmButton mb-5" variant="success" size="lg" type="submit">
+        <Link to="">
+          <Button className="quizItmButton noHover mb-5" variant="success" size="lg" type="submit">
           <span class="quiz-answer">Hus</span>
           </Button>
         </Link>
       </div>
       <div className="col-lg-6">
-        <Link to="/Quiz_answer">
-          <Button className="quizItmButton mb-5" variant="success" size="lg" type="submit">
+        <Link to="">
+          <Button className="quizItmButton noHover mb-5" variant="success" size="lg" type="submit">
           <span class="quiz-answer">Vand</span>
           </Button>
         </Link>

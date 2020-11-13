@@ -9,7 +9,16 @@ body{
 
 
 span{
-  color: red;
+  color: #03DAC6;
+}
+
+span.quiz-item{
+  color: #03DAC6;
+}
+
+span.quiz-answer{
+  color: white;
+  font-size: 30px;
 }
 
 .user{
@@ -44,9 +53,6 @@ span{
   color: #61dafb;
 }
 
-.noHover{
-  pointer-events: none;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -66,4 +72,20 @@ span{
   left: 20ch;
   top: 15ch;
 
+}
+
+
+.quizAnswerButton{
+  color: rgb(255, 255, 255);
+  background-color: #03DAC6;
+  border-radius: 1rem;
+  width: 20ch;
+  height: 15ch;
+  left: 20ch;
+  top: 15ch;
+
+}
+
+.noHover{
+  pointer-events: none;
 }
