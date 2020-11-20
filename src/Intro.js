@@ -17,20 +17,23 @@ export const Intro = () => {
       <dt class="col-sm-12 h3 mb-3"> - Add words to your vocabulary</dt>
 
       <dt class="col-sm-12 h3 mb-3 text-truncate"> - Make your own flipcards</dt>
-
-      <dt class="col-sm-12 h3 mb-3"><span>Note: </span>If you want your progress to be saved you would need to create an account. </dt>
   </dl>
      {/* <Card>
       <Card.Body>This is some text within a card body.</Card.Body>
     </Card> */}
     <Link to="/createAccount">
-        <Button className="signUpButton float-left" variant="success" size="lg" type="submit">
+        <Button className="mBt float-left mb-4" variant="success" size="sm" type="submit">
             Create account
         </Button>
     </Link>
     <Link to="/Menu">
-        <Button className="signUpButton float-right" variant="success" size="lg" type="submit">
+        <Button className="mBt float-right" variant="success" size="sm" type="submit">
             Start
+        </Button>
+    </Link>
+    <Link to="/Menu">
+        <Button className="login float-right" variant="success" size="lg" type="submit">
+            Login
         </Button>
     </Link>
   </div>

@@ -46,11 +46,11 @@ export const Password = () => {
         <Form.Check type="checkbox" label="Check me out" className="ml-1" />
       </Form.Group>
       <Link to="/createAccount">
-        <Button className="float-left signUpButton" variant="success" size="lg" type="submit">
+        <Button className="float-left signUpButton" variant="success" size="md" type="submit">
           Sign Up
         </Button>
       </Link>
-        <Button className="float-right logInButton" variant="success" size="lg" type="submit" >
+        <Button className="float-right logInButton" variant="success" size="md" type="submit" >
           Login
         </Button>
     </Form>

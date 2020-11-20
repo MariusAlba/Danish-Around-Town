@@ -22,28 +22,28 @@ export const Profile = () => {
     <div className="row">
       <div className="col-lg-12">
     <Link to="/Intro">
-        <Button className="signUpButton mb-5" variant="success" size="lg" type="submit">
+        <Button className="mBt mb-5" variant="success" size="lg" type="submit">
            Change Username
         </Button>
     </Link>
     </div>
     <div className="col-lg-12">
-    <Link to="/Intro">
-        <Button className="signUpButton mb-5 testBTT" variant="success" size="lg" type="submit">
+    <Link to="/">
+        <Button className="mBt mb-5 testBTT" variant="success" size="lg" type="submit">
            Change Password
           </Button>
     </Link>
     </div>
-    <div className="col-lg-12">
+    {/* <div className="col-lg-12">
     <Link to="/Intro">
-    <Button className="signUpButton mb-5" variant="success" size="lg" type="submit">
+    <Button className="mBt mb-5" variant="success" size="lg" type="submit">
          My Vocabulary
     </Button>
   </Link>
-  </div>
+  </div> */}
   <div className="col-lg-12">
-    <Link to="/Intro">
-            <Button className="signUpButton mb-5" variant="success" size="lg" type="submit">
+    <Link to="/">
+            <Button className="mBt mb-5" variant="success" size="lg" type="submit">
                Logout
             </Button>
         </Link>
