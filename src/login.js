@@ -1,62 +1,73 @@
-import React from "react";
-import { Button, Card, Form } from 'react-bootstrap';
+import React, { useRef, useState } from "react"
+import { Form, Button, Card, Container, Alert } from "react-bootstrap"
 import './App.css';
-import { Link } from 'react-router-dom';
+import { useAuth } from "./contexts/AuthContext"
+import { Link, useHistory } from "react-router-dom"
 import BackbuttonToIntro from "./BackbuttonToIntro";
 
+export default function LogIn() {
+  const emailRef = useRef()
+  const passwordRef = useRef()
+  const { login } = useAuth()
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
+  const history = useHistory()
 
-export const User = () => {
- return <form>
-    <label>
-       <input placeholder="User" type="text" name="name" />
-    </label>
- </form>
-};
+  async function handleSubmit(e) {
+    e.preventDefault()
 
-export const Password = () => {
-  return <div>
-    <form>
-     <label>
-      <input placeholder="Password" type="text" name="name" />
-     </label>
-  </form>
-  <button type="button" class="btn btn-success float-left">Sign Up</button>
-  <button type="button" class="btn btn-success float-right">Login</button>
-</div>
- };
+    try {
+      setError("")
+      setLoading(true)
+      await login(emailRef.current.value, passwordRef.current.value)
+      history.push("/")
+    } catch {
+      setError("Failed to log in")
+    }
 
- export const LoginForm = () => {
-   return <>
-    <BackbuttonToIntro />
-    <Card>
-      <Card.Body>
-        <h1 className="text-center mb-5">
-            Log In
-        </h1>
-        <Form className="">
-          <Form.Group controlId="formBasicEmail">
-            <Form.Control type="email" placeholder="Enter email" />
-            <Form.Text className="text-muted ml-1">
-              We'll never share your email with anyone else
-            </Form.Text>
-          </Form.Group>
-          <Form.Group controlId="formBasicPassword">
-            <Form.Control type="password" placeholder="Password" />
-          </Form.Group>
-          <Form.Group controlId="formBasicCheckbox">
-            <a href="" className="float-right">Forgot password?</a>
-            <Form.Check type="checkbox" label="Check me out" className="ml-1" />
-          </Form.Group>
-        </Form>
-        <Link to="/SignUp">
-            <Button className="logInButton" variant="success" size="md" type="submit">
-              Log In
-            </Button>
-        </Link>
-      </Card.Body>
-    </Card>
-    <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
-    </div>
-   </>
- };
+    setLoading(false)
+  }
+
+  return (
+    <>
+      <BackbuttonToIntro />
+      <Container
+        className="d-flex align-items-center justify-content-center"
+      >
+        <Card className="w-100 border-0" style={{ maxWidth: "400px" }}>
+          <Card.Body>
+            <h2 className="text-center mb-5">
+                Log In
+            </h2>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group controlId="formEmail">
+                <Form.Label>Email *</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" ref={emailRef} required />
+                <Form.Text className="text-muted ml-1">
+                  We'll never share your email with anyone else
+                </Form.Text>
+              </Form.Group>
+              <Form.Group controlId="formPassword">
+                <Form.Label>Password *</Form.Label>
+                <Form.Control type="password" placeholder="Password" ref={passwordRef} required />
+              </Form.Group>
+            </Form>
+            <div className="text-center">
+              <Link to="/SignUp">
+                  <Button disabled={loading} className="mBt" variant="info" size="md" type="submit">
+                    Log In
+                  </Button>
+              </Link>
+            </div>
+            <div className="text-center mt-2">
+              <Link to="/ForgotPassword">Forgot Password?</Link>
+            </div>
+            <div className="text-center mt-3">
+            Need an account? <Link to="/signup">Sign Up</Link>
+            </div>
+          </Card.Body>
+        </Card>
+      </Container>
+  </>
+  )
+}

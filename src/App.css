@@ -35,20 +35,13 @@ span {
   }
 }
 
-.signUpButton,
-.logInButton {
-  color: rgb(255, 255, 255);
-  background-color: rgb(78, 72, 231, 1);
-  border-radius: 1rem;
-  width: 10ch;
-}
 .mBt {
   color: rgb(255, 255, 255);
   background-color: rgb(78, 72, 231, 1);
   border-radius: 1rem;
   width: 18ch;
 }
-.login{
+.login {
   position: absolute;
   top: 4%;
   right: 2%;
