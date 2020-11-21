@@ -98,3 +98,20 @@ span {
 .flipcard_container .btn:hover {
   background-color: black;
 }
+.bi-arrow-right-circle-fill {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+}
+
+.bi-arrow-left-circle-fill-custom {
+  position: fixed;
+  top: 50%;
+  left: 20%;
+  z-index: 3;
+}
+
+.flipcard_container .btn{
+  background-color: rgba(40, 167, 96,1);
+}
+

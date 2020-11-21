@@ -15,7 +15,12 @@ export const Menu = () => {
       </h1>
       <div className="row">
         <div className="col-lg-6">
-          <Link to="/Flipcard">
+          <Link
+            to={{
+              pathname: "/Flipcard",
+              state: { imageId: 1 },
+            }}
+          >
             <Button
               className="mBt mb-5"
               variant="success"
