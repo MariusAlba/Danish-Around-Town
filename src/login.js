@@ -1,6 +1,5 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { Button, Card, Form } from 'react-bootstrap';
 import './App.css';
 import { Link } from 'react-router-dom';
 import BackbuttonToIntro from "./BackbuttonToIntro";
@@ -27,34 +26,37 @@ export const Password = () => {
  };
 
  export const LoginForm = () => {
-   return <div>
-        <BackbuttonToIntro />
+   return <>
+    <BackbuttonToIntro />
+    <Card>
+      <Card.Body>
         <h1 className="text-center mb-5">
             Log In
         </h1>
-          <Form className="">
-            <Form.Group controlId="formBasicEmail">
-              <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted ml-1">
-                We'll never share your email with anyone else
-              </Form.Text>
-            </Form.Group>
-
-      <Form.Group controlId="formBasicPassword">
-        <Form.Control type="password" placeholder="Password" />
-      </Form.Group>
-      <Form.Group controlId="formBasicCheckbox">
-        <a href="" className="float-right">Forgot password?</a>
-        <Form.Check type="checkbox" label="Check me out" className="ml-1" />
-      </Form.Group>
-      <Link to="/SignUp">
-        <Button className="float-left signUpButton" variant="success" size="md" type="submit">
-          Sign Up
-        </Button>
-      </Link>
-        <Button className="float-right logInButton" variant="success" size="md" type="submit" >
-          Login
-        </Button>
-    </Form>
-   </div>
+        <Form className="">
+          <Form.Group controlId="formBasicEmail">
+            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Text className="text-muted ml-1">
+              We'll never share your email with anyone else
+            </Form.Text>
+          </Form.Group>
+          <Form.Group controlId="formBasicPassword">
+            <Form.Control type="password" placeholder="Password" />
+          </Form.Group>
+          <Form.Group controlId="formBasicCheckbox">
+            <a href="" className="float-right">Forgot password?</a>
+            <Form.Check type="checkbox" label="Check me out" className="ml-1" />
+          </Form.Group>
+        </Form>
+        <Link to="/SignUp">
+            <Button className="logInButton" variant="success" size="md" type="submit">
+              Log In
+            </Button>
+        </Link>
+      </Card.Body>
+    </Card>
+    <div className="w-100 text-center mt-2">
+        Need an account? <Link to="/signup">Sign Up</Link>
+    </div>
+   </>
  };
