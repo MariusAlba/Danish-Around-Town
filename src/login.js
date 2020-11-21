@@ -36,7 +36,7 @@ export default function LogIn() {
       >
         <Card className="w-100 border-0" style={{ maxWidth: "400px" }}>
           <Card.Body>
-            <h2 className="text-center mb-5">
+            <h2 className="text-center mb-4">
                 Log In
             </h2>
             <Form onSubmit={handleSubmit}>
