@@ -105,7 +105,13 @@ span {
 }
 
 .bi-arrow-left-circle-fill-custom {
-  position: absolute;
+  position: fixed;
   top: 50%;
-  left: 6%;
+  left: 20%;
+  z-index: 3;
 }
+
+.flipcard_container .btn{
+  background-color: rgba(40, 167, 96,1);
+}
+

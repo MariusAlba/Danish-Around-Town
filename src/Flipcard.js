@@ -74,7 +74,7 @@ export const Flipcard = (props) => {
                 alt=""
               />
               <button className="front-flip-button btn" onClick={handleClick}>
-                click to flip
+                Click to flip
               </button>
             </div>
 
