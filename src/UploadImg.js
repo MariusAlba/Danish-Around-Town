@@ -42,6 +42,8 @@ export const ReactFirebaseFileUpload = () => {
     );
   };
 
+// document.getElementById()
+
   console.log("image: ", image);
 
   return (
@@ -51,6 +53,7 @@ export const ReactFirebaseFileUpload = () => {
       <br />
       <br />
       <input type="file" onChange={handleChange} />
+      <input type="text" placeholder="File Name"></input>
       {/* <button onClick={handleUpload}>Upload</button> */}
       <Button onClick={handleUpload}>Upload</Button>
       <br />

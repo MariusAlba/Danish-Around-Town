@@ -23,6 +23,12 @@ span {
   left: 20px;
 }
 
+.bi-arrow-right-circle-fill {
+  position: absolute;
+  top: 30%;
+  right: 19%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -34,7 +40,18 @@ span {
   color: rgb(255, 255, 255);
   background-color: rgb(78, 72, 231, 1);
   border-radius: 1rem;
-  width: 20ch;
+  width: 10ch;
+}
+.mBt {
+  color: rgb(255, 255, 255);
+  background-color: rgb(78, 72, 231, 1);
+  border-radius: 1rem;
+  width: 18ch;
+}
+.login{
+  position: absolute;
+  top: 4%;
+  right: 2%;
 }
 
 .App-link {

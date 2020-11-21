@@ -24,12 +24,12 @@ export const CreateAccount = () => {
         <Form.Label>Password *</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
-      <Link to="/Intro">
+      <Link to="/Menu">
         <Button size="lg" type="submit" className="mb-2 float-right">
           Submit
         </Button>
       </Link>
-      <Link to="/login">
+      <Link to="/">
         <Button className="btn-btn" variant="success" size="lg" type="submit" >
           Back
         </Button>

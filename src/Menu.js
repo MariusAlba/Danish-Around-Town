@@ -22,7 +22,7 @@ export const Menu = () => {
             }}
           >
             <Button
-              className="signUpButton mb-5"
+              className="mBt mb-5"
               variant="success"
               size="lg"
               type="submit"
@@ -47,7 +47,7 @@ export const Menu = () => {
         <div className="col-lg-5 ">
           <Link to="/UploadImg">
             <Button
-              className="signUpButton mb-5 testBTT"
+              className="mBt mb-5"
               variant="success"
               size="lg"
               type="submit"
@@ -69,7 +69,7 @@ export const Menu = () => {
             </Button>
           </Link>
         </div>
-        <div className="col-lg-6">
+        {/* <div className="col-lg-6">
           <Link to="/Intro">
             <Button
               className="signUpButton mb-5"
@@ -118,7 +118,7 @@ export const Menu = () => {
               Translate
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

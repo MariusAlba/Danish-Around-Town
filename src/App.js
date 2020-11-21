@@ -43,16 +43,12 @@ function App() {
         <header className="App-header"></header>
 
         <Switch>
-          <Route
-            path="/NotLoggedInScreen"
-            exact
-            component={NotLoggedInScreen}
-          />
-          <Route path="/" exact component={LoginForm} />
+          <Route path="/" exact component={Intro} />
+          <Route path="/login" exact component={LoginForm} />
           <Route path="/createAccount" exact component={CreateAccount} />
-          <Route path="/LoggedInScreen" exact component={LoggedInScreen} />
+          {/* <Route path="/LoggedInScreen" exact component={LoggedInScreen} /> */}
+          <Route path="/NotLoggedInScreen" exact component={NotLoggedInScreen} />
           <Route path="/AccountCreated" exact component={AccountCreated} />
-          <Route path="/Intro" exact component={Intro} />
           <Route path="/Menu" exact component={Menu} />
           <Route path="/Profile" exact component={Profile} />
           <Route path="/UploadImg" exact component={ReactFirebaseFileUpload} />
