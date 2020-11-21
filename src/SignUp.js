@@ -42,9 +42,8 @@ export default function SignUp() {
       >
         <Card className="w-100 border-0" style={{ maxWidth: "400px" }}>
           <Card.Body>
-            <h2 className="text-center mb-4">
-              Sign Up
-            </h2>
+            <h2 className="text-center mb-4">Sign Up</h2>
+            {error && <Alert variant="danger">{error}</Alert>}
             <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formUsername">
                 <Form.Label>Username *</Form.Label>
@@ -62,14 +61,12 @@ export default function SignUp() {
                 <Form.Label>Password *</Form.Label>
                 <Form.Control type="password" placeholder="Enter password again" ref={passwordConfirmRef} required />
               </Form.Group>
+              <div className="text-center">
+                  <Button disabled={loading} className="mBt" variant="info" size="md" type="submit">
+                    Sign Up
+                  </Button>
+              </div>
             </Form>
-            <div className="text-center">
-              <Link to="/Menu">
-                <Button disabled={loading} className="mBt" variant="info" size="md" type="submit">
-                  Sign Up
-                </Button>
-              </Link>
-            </div>
             <div className="text-center mt-3">
               Already have an account? <Link to="LogIn">Log In</Link>
             </div>

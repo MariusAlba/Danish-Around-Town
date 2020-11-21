@@ -32,7 +32,7 @@ export default function UpdateProfile() {
 
     Promise.all(promises)
       .then(() => {
-        history.push("/")
+        history.push("/Profile")
       })
       .catch(() => {
         setError("Failed to update account")
@@ -51,6 +51,7 @@ export default function UpdateProfile() {
             <h2 className="text-center mb-4">
               Update Profile
             </h2>
+            {error && <Alert variant="danger">{error}</Alert>}
             <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formUsername">
                 <Form.Label>Username</Form.Label>
@@ -64,14 +65,12 @@ export default function UpdateProfile() {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Leave blank to keep the same" ref={passwordConfirmRef} required />
               </Form.Group>
-            </Form>
-            <div className="text-center">
-              <Link to="/Profile">
+              <div className="text-center">
                 <Button disabled={loading} className="mBt" variant="info" size="md" type="submit">
                   Update
                 </Button>
-              </Link>
-            </div>
+              </div>
+            </Form>
             <div className="text-center mt-3">
               <Link to="Profile"> Cancel </Link>
             </div>

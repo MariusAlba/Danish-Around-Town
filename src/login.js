@@ -36,9 +36,8 @@ export default function LogIn() {
       >
         <Card className="w-100 border-0" style={{ maxWidth: "400px" }}>
           <Card.Body>
-            <h2 className="text-center mb-4">
-                Log In
-            </h2>
+            <h2 className="text-center mb-4">Log In</h2>
+            {error && <Alert variant="danger">{error}</Alert>}
             <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formEmail">
                 <Form.Label>Email *</Form.Label>
@@ -51,14 +50,12 @@ export default function LogIn() {
                 <Form.Label>Password *</Form.Label>
                 <Form.Control type="password" placeholder="Password" ref={passwordRef} required />
               </Form.Group>
-            </Form>
-            <div className="text-center">
-              <Link to="/SignUp">
+              <div className="text-center">
                   <Button disabled={loading} className="mBt" variant="info" size="md" type="submit">
                     Log In
                   </Button>
-              </Link>
-            </div>
+              </div>
+            </Form>
             <div className="text-center mt-2">
               <Link to="/ForgotPassword">Forgot Password?</Link>
             </div>
