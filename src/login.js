@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './App.css';
 import { Link } from 'react-router-dom';
+import BackbuttonToIntro from "./BackbuttonToIntro";
 
 
 export const User = () => {
@@ -27,8 +28,9 @@ export const Password = () => {
 
  export const LoginForm = () => {
    return <div>
+        <BackbuttonToIntro />
         <h1 className="text-center mb-5">
-            Danish Around Town
+            Log In
         </h1>
           <Form className="">
             <Form.Group controlId="formBasicEmail">
@@ -45,7 +47,7 @@ export const Password = () => {
         <a href="" className="float-right">Forgot password?</a>
         <Form.Check type="checkbox" label="Check me out" className="ml-1" />
       </Form.Group>
-      <Link to="/createAccount">
+      <Link to="/SignUp">
         <Button className="float-left signUpButton" variant="success" size="md" type="submit">
           Sign Up
         </Button>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 // import logo from './logo.svg';
 import "./App.css";
-import { Header } from "./login";
-import { LoginForm, Password, User } from "./login";
-import { CreateAccount } from "./createAccount";
+import { Header } from "./LogIn";
+import { LoginForm, Password, User } from "./LogIn";
+import { SignUp } from "./SignUp";
 import { AccountCreated } from "./AccountCreated";
 import { Intro } from "./Intro";
 import { Menu } from "./Menu";
@@ -45,7 +45,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Intro} />
           <Route path="/login" exact component={LoginForm} />
-          <Route path="/createAccount" exact component={CreateAccount} />
+          <Route path="/SignUp" exact component={SignUp} />
           {/* <Route path="/LoggedInScreen" exact component={LoggedInScreen} /> */}
           <Route path="/NotLoggedInScreen" exact component={NotLoggedInScreen} />
           <Route path="/AccountCreated" exact component={AccountCreated} />

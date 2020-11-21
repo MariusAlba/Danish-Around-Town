@@ -5,11 +5,13 @@ import Form from 'react-bootstrap/Form';
 import FormControl from "react-bootstrap/FormControl";
 import './App.css';
 import { Link } from 'react-router-dom';
+import BackbuttonToIntro from "./BackbuttonToIntro";
 
-export const CreateAccount = () => {
+export const SignUp = () => {
   return <div>
+    <BackbuttonToIntro />
       <h1 className="text-center mb-5">
-        Create Account
+        Sign Up
     </h1>
       <Form>
       <Form.Group controlId="formGroupEmail">
@@ -29,9 +31,9 @@ export const CreateAccount = () => {
           Submit
         </Button>
       </Link>
-      <Link to="/">
+      <Link to="/LogIn">
         <Button className="btn-btn" variant="success" size="lg" type="submit" >
-          Back
+          Log In
         </Button>
       </Link>
     </Form>
