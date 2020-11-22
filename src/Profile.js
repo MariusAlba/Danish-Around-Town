@@ -18,17 +18,17 @@ export const Profile = () => {
         <path fillerule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
       </svg>
 
-    <h1 className="mb-5"> Jesus</h1>
+    <h1 className="mb-5"> Jesus </h1>
     <div className="row">
       <div className="col-lg-12">
-    <Link to="/Intro">
+    <Link to="/UpdateProfile">
         <Button className="mBt mb-5" variant="success" size="lg" type="submit">
            Change Username
         </Button>
     </Link>
     </div>
     <div className="col-lg-12">
-    <Link to="/">
+    <Link to="/UpdateProfile">
         <Button className="mBt mb-5 testBTT" variant="success" size="lg" type="submit">
            Change Password
           </Button>

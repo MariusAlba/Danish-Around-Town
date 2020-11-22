@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 // import logo from './logo.svg';
 import "./App.css";
-import { Header } from "./login";
-import { LoginForm, Password, User } from "./login";
-import { CreateAccount } from "./createAccount";
+import LogIn from "./login";
+import SignUp from "./SignUp";
+import ForgotPassword from "./ForgotPassword";
+import UpdateProfile from "./UpdateProfile"
+// import { LoginForm, Password, User } from "./LogIn";
 import { AccountCreated } from "./AccountCreated";
 import { Intro } from "./Intro";
 import { Menu } from "./Menu";
@@ -16,6 +18,7 @@ import { firebaseAppAuth } from "./firebase";
 import { LoggedInScreen } from "./LoggedInScreen";
 import { NotLoggedInScreen } from "./NotLoggedInScreen";
 import { Flipcard } from "./Flipcard";
+import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
   // const [user, setUser] = useState('');
@@ -44,8 +47,6 @@ function App() {
 
         <Switch>
           <Route path="/" exact component={Intro} />
-          <Route path="/login" exact component={LoginForm} />
-          <Route path="/createAccount" exact component={CreateAccount} />
           {/* <Route path="/LoggedInScreen" exact component={LoggedInScreen} /> */}
           <Route path="/NotLoggedInScreen" exact component={NotLoggedInScreen} />
           <Route path="/AccountCreated" exact component={AccountCreated} />
@@ -53,6 +54,12 @@ function App() {
           <Route path="/Profile" exact component={Profile} />
           <Route path="/UploadImg" exact component={ReactFirebaseFileUpload} />
           <Route path="/Flipcard" exact component={Flipcard} />
+          <AuthProvider>
+            <Route path="/login" exact component={LogIn} />
+            <Route path="/SignUp" exact component={SignUp} />
+            <Route path="/ForgotPassword" exact component={ForgotPassword} />
+            <Route path="/UpdateProfile" exact component={UpdateProfile} />
+          </AuthProvider>
         </Switch>
       </div>
     </BrowserRouter>
