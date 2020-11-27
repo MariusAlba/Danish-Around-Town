@@ -4,12 +4,13 @@ import "./App.css";
 import LogIn from "./login";
 import SignUp from "./SignUp";
 import ForgotPassword from "./ForgotPassword";
-import UpdateProfile from "./UpdateProfile"
+import UpdateProfile from "./UpdateProfile";
+import Profile from "./Profile";
+import PrivateRoute from "./PrivateRoute"
 // import { LoginForm, Password, User } from "./LogIn";
 import { AccountCreated } from "./AccountCreated";
 import { Intro } from "./Intro";
 import { Menu } from "./Menu";
-import { Profile } from "./Profile";
 import { ReactFirebaseFileUpload } from "./UploadImg";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -51,14 +52,14 @@ function App() {
           <Route path="/NotLoggedInScreen" exact component={NotLoggedInScreen} />
           <Route path="/AccountCreated" exact component={AccountCreated} />
           <Route path="/Menu" exact component={Menu} />
-          <Route path="/Profile" exact component={Profile} />
           <Route path="/UploadImg" exact component={ReactFirebaseFileUpload} />
           <Route path="/Flipcard" exact component={Flipcard} />
           <AuthProvider>
             <Route path="/login" exact component={LogIn} />
             <Route path="/SignUp" exact component={SignUp} />
             <Route path="/ForgotPassword" exact component={ForgotPassword} />
-            <Route path="/UpdateProfile" exact component={UpdateProfile} />
+            <PrivateRoute path="/Profile" exact component={Profile} />
+            <PrivateRoute path="/UpdateProfile" exact component={UpdateProfile} />
           </AuthProvider>
         </Switch>
       </div>

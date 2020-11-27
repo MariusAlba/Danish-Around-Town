@@ -12,9 +12,9 @@ export const Intro = () => {
   <dl class="row text-left mt-5 mb-5">
       <dt class="col-sm-12 h3 mb-3">Welcome! Here you can:</dt>
 
-      <dt class="col-sm-12 h3 mb-3"> - Upload pictures of Danish signs and create your own filp cards.</dt>
+      <dt class="col-sm-12 h3 mb-3">  - Upload pictures of Danish signs and create your own filp cards.</dt>
 
-      <dt class="col-sm-12 h3 mb-3"> - Learn Daish anytime with filpcard!</dt>
+      <dt class="col-sm-12 h3 mb-3">  - Learn Daish anytime with filpcards!</dt>
 
   </dl>
      {/* <Card>
