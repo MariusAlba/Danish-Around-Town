@@ -40,7 +40,7 @@ export default function Profile() {
         <div className="col-lg-12">
           <Link to="/UpdateProfile">
             <Button className="mBt mb-5" variant="info" size="lg" type="submit">
-              Change Username
+              Change Email
             </Button>
           </Link>
         </div>
