@@ -10,7 +10,6 @@ import { Menu } from "./Menu";
 import { Profile } from "./Profile";
 import { ReactFirebaseFileUpload } from "./UploadImg";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
 import { useAuthState } from "react-firebase-hooks/auth";
 import { firebaseAppAuth } from "./firebase";
 import { LoggedInScreen } from "./LoggedInScreen";
