@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-// import logo from './logo.svg';
 import "./App.css";
 import LogIn from "./login";
 import SignUp from "./SignUp";
 import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile"
-// import { LoginForm, Password, User } from "./LogIn";
 import { AccountCreated } from "./AccountCreated";
 import { Intro } from "./Intro";
 import { Menu } from "./Menu";
