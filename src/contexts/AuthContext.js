@@ -27,8 +27,8 @@ export function AuthProvider({ children }) {
     return firebaseAppAuth.sendPasswordResetEmail(email)
   }
 
-  function updateUsername(username) {
-    return currentUser.updateUsername(username)
+  function updateEmail(email) {
+    return currentUser.updateEmail(email)
   }
 
   function updatePassword(password) {
@@ -50,7 +50,7 @@ export function AuthProvider({ children }) {
     signup,
     logout,
     resetPassword,
-    updateUsername,
+    updateEmail,
     updatePassword
   }
 
