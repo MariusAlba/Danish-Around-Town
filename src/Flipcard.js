@@ -62,8 +62,10 @@ export const Flipcard = (props) => {
       )}
       <div className="row">
         <div className="col-lg-12" align="center">
+
           <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
             <div className="flipcard_container">
+
               <img
                 className="location-front-image"
                 src={
@@ -78,18 +80,18 @@ export const Flipcard = (props) => {
               </button>
             </div>
 
-            <div className="flipcard_container">
+            <div className="flipcard_container flipText">
               <div
-                style={{
-                  backgroundColor: "rgb(78, 72, 231, 1)",
-                  height: 500,
-                  width: 700,
-                  color: "#fff",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  fontSize: "100px",
-                }}
+                // style={{
+                //   backgroundColor: "rgb(78, 72, 231, 1)",
+                //   height: 500,
+                //   width: 700,
+                //   color: "#fff",
+                //   display: "flex",
+                //   justifyContent: "center",
+                //   alignItems: "center",
+                //   fontSize: "100px",
+                // }}
               >
                 {translations[imageId - 1]}
               </div>

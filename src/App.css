@@ -62,49 +62,60 @@ span {
 
 /* Container needed to position the button. Adjust the width as needed */
 .flipcard_container {
-  position: relative;
-  width: 700px;
+  position: fixed;
+  width: 90%;
 }
 
 /* Make the image responsive */
 .flipcard_container img {
-  width: 100%;
+  width: 85%;
   height: auto;
+  border-radius: 10%;
 }
 
 /* Style the button and place it in the middle of the container/image */
 .flipcard_container .btn {
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 13%;
   transform: translate(-10%, -10%);
   -ms-transform: translate(-10%, -10%);
   background-color: #555;
   color: white;
-  font-size: 16px;
-  padding: 12px 24px;
+  font-size: 0.8rem;
+  padding: 2%;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  background-color: rgba(40, 167, 96,1);
 }
 
 .flipcard_container .btn:hover {
   background-color: black;
 }
 .bi-arrow-right-circle-fill {
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 60%;
   right: 20%;
+  z-index: 3;
 }
 
 .bi-arrow-left-circle-fill-custom {
   position: fixed;
-  top: 50%;
+  top: 60%;
   left: 20%;
   z-index: 3;
 }
 
-.flipcard_container .btn{
-  background-color: rgba(40, 167, 96,1);
+.flipText {
+  background-color: rgb(64, 62, 126);
+  /* height: 50%; */
+  width: 70%;
+  color: white;
+  padding: 10%;
+  left: 9%;
+  align-items: center;
+  font-size: 1.9em;
+  border-radius: 10%;
 }
 
