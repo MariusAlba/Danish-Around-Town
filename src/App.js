@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React, {useState, useEffect} from 'react';
 // import logo from './logo.svg';
 import './App.css';
@@ -9,6 +10,22 @@ import { Intro } from './Intro';
 import { Menu } from './Menu';
 import { Profile } from './Profile';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+=======
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import LogIn from "./login";
+import SignUp from "./SignUp";
+import ForgotPassword from "./ForgotPassword";
+import UpdateProfile from "./UpdateProfile";
+import Profile from "./Profile";
+import PrivateRoute from "./PrivateRoute"
+// import { LoginForm, Password, User } from "./LogIn";
+import { AccountCreated } from "./AccountCreated";
+import { Intro } from "./Intro";
+import { Menu } from "./Menu";
+import { ReactFirebaseFileUpload } from "./UploadImg";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+>>>>>>> Stashed changes
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { firebaseAppAuth } from "./firebase";
