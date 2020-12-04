@@ -10,9 +10,10 @@ export const Menu = () => {
   return (
     <div className="container App">
       <Profileicon />
-      <h1 className="mb-5">
-        <span>Hej!</span> What would you like to do?
-      </h1>
+      <h4 className="mb-5">
+        {/* <span>Hej!</span>  */}
+        Hej! What would you like to do?
+      </h4>
       <div className="row">
         <div className="col-lg-6">
           <Link
@@ -22,9 +23,9 @@ export const Menu = () => {
             }}
           >
             <Button
-              className="mBt mb-5"
+              className="mBt mb-4"
               variant="success"
-              size="lg"
+              size="md"
               type="submit"
             >
               <svg
@@ -47,9 +48,9 @@ export const Menu = () => {
         <div className="col-lg-5 ">
           <Link to="/UploadImg">
             <Button
-              className="mBt mb-5"
+              className="mBt mb-4"
               variant="success"
-              size="lg"
+              size="md"
               type="submit"
             >
               <svg

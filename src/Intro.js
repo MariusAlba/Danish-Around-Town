@@ -8,17 +8,17 @@ import Profileicon from "./Profileicon";
 
 export const Intro = () => {
   return <div className="App">
-    <Profileicon />
+    {/* <Profileicon /> */}
     <h1> Danish Around Town </h1>
 
-    <dl class="row text-left mt-5 mb-5">
-        <dt class="col-sm-12 h3 mb-3">Welcome! Here you can:</dt>
+    <dl class="row mb-5">
+        <dt class="col-sm-12 h5 mb-3">Welcome! Here you can:</dt>
 
-        <dt class="col-sm-12 h3 mb-3">  - Upload pictures of Danish signs and create your own filp cards.</dt>
+        <dt class="col-sm-12 h5 mb-3">  - Upload pictures of Danish signs and create your own filp cards.</dt>
 
-        <dt class="col-sm-12 h3 mb-3">  - Learn Daish anytime with filpcards!</dt>
+        <dt class="col-sm-12 h5 mb-3">  - Learn Daish anytime with filpcards!</dt>
 
-        <dt class="col-sm-12 h3 mb-3">Note: If you want your progress to be saved you would need to create an account. </dt>
+        <dt class="col-sm-12 h5 mb-3">Note: If you want your progress to be saved you would need to create an account. </dt>
 
     </dl>
       {/* <Card>

@@ -6,8 +6,8 @@ export default class Profileicon extends Component {
     return (
       <Link to="/Profile">
         <svg
-          width="3em"
-          height="3em"
+          width="2em"
+          height="2em"
           viewBox="0 0 16 16"
           className="bi bi-person-circle float-right user"
           fill="currentColor"

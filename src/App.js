@@ -4,7 +4,6 @@ import LogIn from "./login";
 import SignUp from "./SignUp";
 import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
-// import UpdateProfile from "./UpdateProfile";
 import Profile from "./Profile";
 import PrivateRoute from "./PrivateRoute"
 // import { LoginForm, Password, User } from "./LogIn";
@@ -13,6 +12,7 @@ import { Intro } from "./Intro";
 import { Menu } from "./Menu";
 import { ReactFirebaseFileUpload } from "./UploadImg";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 import { useAuthState } from "react-firebase-hooks/auth";
 import { firebaseAppAuth } from "./firebase";
 import { LoggedInScreen } from "./LoggedInScreen";

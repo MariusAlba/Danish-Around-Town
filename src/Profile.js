@@ -23,7 +23,7 @@ export default function Profile() {
   return (
     <div className="container App">
       <Link to='/Menu'>
-        <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle-fill backArrow" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle-fill backArrow" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path filleRule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"/>
         </svg>
       </Link>
@@ -39,14 +39,14 @@ export default function Profile() {
       <div className="row">
         <div className="col-lg-12">
           <Link to="/UpdateProfile">
-            <Button className="mBt mb-5" variant="info" size="lg" type="submit">
+            <Button className="mBt mb-3" variant="info" size="md" type="submit">
               Change Email
             </Button>
           </Link>
         </div>
         <div className="col-lg-12">
           <Link to="/UpdateProfile">
-              <Button className="mBt mb-5 testBTT" variant="info" size="lg" type="submit">
+              <Button className="mBt mb-3 testBTT" variant="info" size="md" type="submit">
                 Change Password
                 </Button>
           </Link>
@@ -59,7 +59,7 @@ export default function Profile() {
           </Link>
         </div> */}
         <div className="col-lg-12">
-            <Button onClick={handleLogout} className="mBt mb-5" variant="info" size="lg" type="submit">
+            <Button onClick={handleLogout} className="mBt mb-3" variant="info" size="md" type="submit">
                Logout
             </Button>
         </div>

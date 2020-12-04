@@ -45,10 +45,10 @@ export const Flipcard = (props) => {
           }}
         >
           <svg
-            width="3em"
-            height="3em"
+            width="2em"
+            height="2em"
             viewBox="0 0 16 16"
-            class="bi bi-arrow-left-circle-fill-custom"
+            class="bi bi-arrow-left-circle-fill-custom mt-3"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
             onClick={resetIsFlipped}
@@ -64,10 +64,10 @@ export const Flipcard = (props) => {
         <div className="col-lg-12" align="center">
 
           <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
-            <div className="flipcard_container">
+            <div className="flipcard_container mt-5">
 
               <img
-                className="location-front-image"
+                className="flipcard_container"
                 src={
                   "https://firebasestorage.googleapis.com/v0/b/danish-around-town.appspot.com/o/images%2Fimage" +
                   imageId +
@@ -80,7 +80,7 @@ export const Flipcard = (props) => {
               </button>
             </div>
 
-            <div className="flipcard_container flipText">
+            <div className="flipcard_container flipText mt-5">
               <div
                 // style={{
                 //   backgroundColor: "rgb(78, 72, 231, 1)",
@@ -111,10 +111,10 @@ export const Flipcard = (props) => {
           }}
         >
           <svg
-            width="3em"
-            height="3em"
+            width="2em"
+            height="2em"
             viewBox="0 0 16 16"
-            class="bi bi-arrow-right-circle-fill"
+            class="bi bi-arrow-right-circle-fill mt-3"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
             onClick={resetIsFlipped}
@@ -126,8 +126,8 @@ export const Flipcard = (props) => {
           </svg>
         </Link>
       )}
-      <Link to="/Menu">
-        <svg
+      {/* <Link to="/Menu">  */}
+        {/* <svg
           width="3em"
           height="3em"
           viewBox="0 0 16 16"
@@ -139,8 +139,8 @@ export const Flipcard = (props) => {
             filleRule="evenodd"
             d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"
           />
-        </svg>
-      </Link>
+        </svg> */}
+      {/* </Link> */}
     </div>
   );
 };

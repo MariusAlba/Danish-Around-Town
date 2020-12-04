@@ -6,8 +6,8 @@ export default class BackbuttonToIntro extends Component {
     return (
       <Link to="/">
         <svg
-          width="3em"
-          height="3em"
+          width="2em"
+          height="2em"
           viewBox="0 0 16 16"
           className="bi bi-arrow-left-circle-fill backArrow"
           fill="currentColor"
