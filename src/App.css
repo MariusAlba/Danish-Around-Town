@@ -127,3 +127,10 @@ span {
   border-radius: 5%;
 }
 
+.casualSitting {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  justify-content: flex-end;
+}
+

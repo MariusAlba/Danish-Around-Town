@@ -7,6 +7,8 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Backbutton from "./Backbutton";
 import { ReactComponent as Camera } from "./img/camera.svg";
+import { ReactComponent as Sitting } from "./img/sitting.svg";
+
 import { Container, Col, Row } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
 
@@ -112,7 +114,14 @@ export const ReactFirebaseFileUpload = () => {
 
     <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
       <Button onClick={handleUpload} style={{backgroundColor: '#4E48E7'}}> Upload </Button>
+
+      <Sitting   
+        className="casualSitting"
+        height="100px"
+        width="100px"
+      />
     </div>
+    
 
 
 
