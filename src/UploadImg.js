@@ -116,7 +116,7 @@ export const ReactFirebaseFileUpload = () => {
       <Button onClick={handleUpload} style={{backgroundColor: '#4E48E7'}}> Upload </Button>
 
       <Sitting   
-        className="casualSitting"
+        className="cartoonRight"
         height="100px"
         width="100px"
       />
