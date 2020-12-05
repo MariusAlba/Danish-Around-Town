@@ -11,7 +11,7 @@ body {
 }
 
 span {
-  color: red;
+  color: #03DAC6;
 }
 
 .user {
@@ -134,3 +134,9 @@ span {
   justify-content: flex-end;
 }
 
+.cartoonCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  justify-content: flex-end;
+}
