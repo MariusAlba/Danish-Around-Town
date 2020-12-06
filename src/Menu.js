@@ -5,15 +5,23 @@ import Form from "react-bootstrap/Form";
 import "./App.css";
 import { Link } from "react-router-dom";
 import Profileicon from "./Profileicon";
+import { ReactComponent as Peaceful} from "./img/peaceful.svg";
+
 
 export const Menu = () => {
   return (
-    <div className="container App">
+    <div 
+    className="container App">
       <Profileicon />
-      <h4 className="mb-5">
-        {/* <span>Hej!</span>  */}
-        Hej! What would you like to do?
-      </h4>
+      <span>
+      <h1 className="mb-6">
+        <i>Hej!</i>
+      </h1>
+      </span>
+
+      <h3 className="mb-5">
+        What would you like to do?
+      </h3>
       <div className="row">
         <div className="col-lg-6">
           <Link
@@ -121,6 +129,14 @@ export const Menu = () => {
           </Link>
         </div> */}
       </div>
+
+      <Peaceful className="cartoonCenter"
+        height="180px"
+        width="180px"
+      />
+
+
+
     </div>
   );
 };
