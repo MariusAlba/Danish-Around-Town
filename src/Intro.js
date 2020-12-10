@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Button  from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import './App.css';
 import { Link } from 'react-router-dom';
 import Profileicon from "./Profileicon";
+import Popup from "./Popup";
+
+
 
 export const Intro = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
+
   return <div className="App">
     {/* <Profileicon /> */}
     <h1> Danish Around Town </h1>
@@ -29,10 +37,32 @@ export const Intro = () => {
               Sign Up
           </Button>
       </Link>
-      <Link to="/Menu">
-          <Button className="mBt float-right" variant="success" size="sm" type="submit">
-              Start
-          </Button>
-      </Link>
+
+      {/*<Link to="/Menu">*/}
+      <Button className="mBt float-right" variant="success" size="sm" type="submit" onClick={togglePopup}>
+          Start
+      </Button>
+      {isOpen && (
+        <Popup 
+        content={
+          <>
+          <p>
+            You're welcome to use this app without sign in, but the system will not record the pictures you upload
+          </p>
+
+          <Link to="/Menu">
+            <Button className="mBt center" variant="success" size="sm" type="submit">
+              Start Anyway!
+            </Button>
+          </Link> 
+          </>
+
+        }
+        handleClose={togglePopup}
+        />
+      )}
+
+
+        {/*</Link>*/}
   </div>
 };

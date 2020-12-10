@@ -11,6 +11,7 @@ import { ReactComponent as Sitting } from "./img/sitting.svg";
 
 import { Container, Col, Row } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
+import './App.css'; 
 
 
 export const ReactFirebaseFileUpload = () => {
@@ -113,7 +114,12 @@ export const ReactFirebaseFileUpload = () => {
     </div>
 
     <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-      <Button onClick={handleUpload} style={{backgroundColor: '#4E48E7'}}> Upload </Button>
+      <Button onClick={handleUpload} 
+              className="mBt mb-3"
+              size="xs"
+              type="submit">
+              {/* style={{backgroundColor: '#4E48E7'}}>  */}
+              Upload </Button>
 
       <Sitting   
         className="cartoonRight"
