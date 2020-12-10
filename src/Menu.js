@@ -7,8 +7,9 @@ import { Link } from "react-router-dom";
 import Profileicon from "./Profileicon";
 import { ReactComponent as Peaceful} from "./img/peaceful.svg";
 
-
 export const Menu = () => {
+  
+
   return (
     <div 
     className="container App">
@@ -134,6 +135,7 @@ export const Menu = () => {
         height="180px"
         width="180px"
       />
+
 
 
 
