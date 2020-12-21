@@ -5,10 +5,12 @@ import { useAuth } from "./contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import BackbuttonToIntro from "./BackbuttonToIntro";
 
-export default function LogIn() {
+export default function SignUp() {
+  const usernameRef = useRef()
   const emailRef = useRef()
   const passwordRef = useRef()
-  const { login } = useAuth()
+  const passwordConfirmRef = useRef()
+  const { signup } = useAuth()
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const history = useHistory()
@@ -16,13 +18,17 @@ export default function LogIn() {
   async function handleSubmit(e) {
     e.preventDefault()
 
+    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+      return setError("Passwords do not match")
+    }
+
     try {
       setError("")
       setLoading(true)
-      await login(emailRef.current.value, passwordRef.current.value)
-      history.push("/Menu")
+      await signup(emailRef.current.value, passwordRef.current.value)
+      history.push("/LogIn")
     } catch {
-      setError("Failed to log in")
+      setError("Failed to create an account")
     }
 
     setLoading(false)
@@ -36,31 +42,33 @@ export default function LogIn() {
       >
         <Card className="w-100 border-0" style={{ maxWidth: "400px" }}>
           <Card.Body>
-            <h2 className="text-center mb-4">Log In</h2>
+            <h2 className="text-center mb-4">Sign Up</h2>
             {error && <Alert variant="danger">{error}</Alert>}
             <Form onSubmit={handleSubmit}>
+              <Form.Group controlId="formUsername">
+                <Form.Label>Username *</Form.Label>
+                <Form.Control type="username" placeholder="Username" ref={usernameRef} required />
+              </Form.Group>
               <Form.Group controlId="formEmail">
                 <Form.Label>Email *</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" ref={emailRef} required />
-                <Form.Text className="text-muted ml-1">
-                  We'll never share your email with anyone else
-                </Form.Text>
               </Form.Group>
               <Form.Group controlId="formPassword">
                 <Form.Label>Password *</Form.Label>
-                <Form.Control type="password" placeholder="Password" ref={passwordRef} required />
+                <Form.Control type="password" placeholder="Enter password" ref={passwordRef} required />
+              </Form.Group>
+              <Form.Group controlId="formPasswordConfirm">
+                <Form.Label>Password *</Form.Label>
+                <Form.Control type="password" placeholder="Enter password again" ref={passwordConfirmRef} required />
               </Form.Group>
               <div className="text-center">
                   <Button disabled={loading} className="mBt" variant="info" size="md" type="submit">
-                    Log In
+                    Sign Up
                   </Button>
               </div>
             </Form>
-            <div className="text-center mt-2">
-              <Link to="/ForgotPassword">Forgot Password?</Link>
-            </div>
             <div className="text-center mt-3">
-            Need an account? <Link to="/signup">Sign Up</Link>
+              Already have an account? <Link to="LogIn">Log In</Link>
             </div>
           </Card.Body>
         </Card>
