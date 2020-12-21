@@ -11,7 +11,7 @@ import { ReactComponent as Sitting } from "./img/sitting.svg";
 
 import { Container, Col, Row } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
-import './App.css'; 
+import './App.css';
 
 
 export const ReactFirebaseFileUpload = () => {
@@ -59,9 +59,6 @@ export const ReactFirebaseFileUpload = () => {
       <Backbutton />
 
       <div>
-      <br />
-      <br />
-
       <Container>
       <h3 className="mb-5">
 
@@ -71,9 +68,9 @@ export const ReactFirebaseFileUpload = () => {
 
       {/* {url} */}
       <Container fluid>
-        
 
-        <Card bg="#4E48E7" text="dark" className="text-center p-3" style={{backgroundColor: '#4E48E7'}}>
+
+        <Card bg="#4E48E7" text="white" className="text-center p-3" style={{backgroundColor: '#4E48E7'}}>
         <blockquote className="text-center p-3">
           <Camera />
           <br />
@@ -114,20 +111,20 @@ export const ReactFirebaseFileUpload = () => {
     </div>
 
     <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-      <Button onClick={handleUpload} 
+      <Button onClick={handleUpload}
               className="mBt mb-3"
               size="xs"
               type="submit">
               {/* style={{backgroundColor: '#4E48E7'}}>  */}
               Upload </Button>
 
-      <Sitting   
+      <Sitting
         className="cartoonRight"
         height="100px"
         width="100px"
       />
     </div>
-    
+
 
 
 
