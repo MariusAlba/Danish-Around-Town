@@ -16,12 +16,17 @@ const languages = [
     label: "Hindi",
     value: "hi",
   },
+  {
+    label: "spanish",
+    value: "es",
+  },
 ]
 
 const Translate = () => {
   const [language, setLanguage] = useState(languages[0])
   const [text, setText] = useState("")
-
+console.log(text)
+console.log(language)
   return (
     <div>
       <div className="ui form">
