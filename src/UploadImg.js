@@ -12,21 +12,42 @@ import { ReactComponent as Sitting } from "./img/sitting.svg";
 import { Container, Col, Row } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
 import './App.css';
+import { useAuth } from "./contexts/AuthContext"
 
 
 export const ReactFirebaseFileUpload = () => {
   const [image, setImage] = useState(null);
+  const [englishName, setEnglishName] = useState("");
   const [url, setUrl] = useState("");
   const [progress, setProgress] = useState(0);
 
+  const { currentUser } = useAuth()
+
+  // Ensure that the file is chosen, and the english text is entered, 
+  // before activating the upload button
+  const isFormValid = () => {
+    return image == null || englishName == '';
+  }
+
   const handleChange = (e) => {
-    if (e.target.files[0]) {
+    if (e.target.files) {
       setImage(e.target.files[0]);
+    } else {
+      let name = e.target.name;
+      if(name == 'englishName'){
+        let value = e.target.value;
+        setEnglishName(value);
+      }
     }
   };
 
   const handleUpload = () => {
-    const uploadTask = storage.ref(`images/${image.name}`).put(image);
+    // If guest user, use -1 as the user ID
+    const userId = currentUser ? currentUser.uid : -1;
+    const fileExtension = image.name.split('.').pop();
+    
+    const uploadTask = storage.ref(`images/${userId}/${englishName}.${fileExtension}`).put(image);
+    
     uploadTask.on(
       "state_changed",
       (snapshot) => {
@@ -50,8 +71,6 @@ export const ReactFirebaseFileUpload = () => {
     );
   };
 
-// document.getElementById()
-
   console.log("image: ", image);
 
   return (
@@ -68,8 +87,6 @@ export const ReactFirebaseFileUpload = () => {
 
       {/* {url} */}
       <Container fluid>
-
-
         <Card bg="#4E48E7" text="white" className="text-center p-3" style={{backgroundColor: '#4E48E7'}}>
         <blockquote className="text-center p-3">
           <Camera />
@@ -82,22 +99,14 @@ export const ReactFirebaseFileUpload = () => {
         </Col>
         </Row>
         </Container>
-
-
-
         </Card>
       </Container>
-
       <br />
     </div>
-
-
     <div>
       <Container>
-
       <Form.Group>
-      <Form.Control size="lg" type="text" placeholder="Enter English" />
-        {/* <button onClick={handleUpload}>Upload</button> */}
+      <Form.Control size="lg" name="englishName" type="text" placeholder="Enter English" onChange={handleChange}/>
       </Form.Group>
       </Container>
     </div>
@@ -114,6 +123,7 @@ export const ReactFirebaseFileUpload = () => {
       <Button onClick={handleUpload}
               className="mBt mb-3"
               size="xs"
+              disabled={isFormValid()}
               type="submit">
               {/* style={{backgroundColor: '#4E48E7'}}>  */}
               Upload </Button>
@@ -124,12 +134,6 @@ export const ReactFirebaseFileUpload = () => {
         width="100px"
       />
     </div>
-
-
-
-
   </div>
-
-
   );
 };

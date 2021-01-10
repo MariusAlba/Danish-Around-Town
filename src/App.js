@@ -32,12 +32,12 @@ function App() {
           <Route path="/NotLoggedInScreen" exact component={NotLoggedInScreen} />
           <Route path="/AccountCreated" exact component={AccountCreated} />
           <Route path="/Menu" exact component={Menu} />
-          <Route path="/UploadImg" exact component={ReactFirebaseFileUpload} />
-          <Route path="/Flipcard" exact component={Flipcard} />
           <AuthProvider>
             <Route path="/login" exact component={LogIn} />
             <Route path="/SignUp" exact component={SignUp} />
             <Route path="/ForgotPassword" exact component={ForgotPassword} />
+            <Route path="/UploadImg" exact component={ReactFirebaseFileUpload} />
+            <Route path="/Flipcard" exact component={Flipcard} />
             <PrivateRoute path="/Profile" exact component={Profile} />
             <PrivateRoute path="/UpdateProfile" exact component={UpdateProfile} />
           </AuthProvider>
