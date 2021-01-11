@@ -23,7 +23,7 @@ export const ReactFirebaseFileUpload = () => {
 
   const { currentUser } = useAuth()
 
-  // Ensure that the file is chosen, and the english text is entered, 
+  // Ensure that the file is chosen, and the english text is entered,
   // before activating the upload button
   const isFormValid = () => {
     return image == null || englishName == '';
@@ -45,9 +45,9 @@ export const ReactFirebaseFileUpload = () => {
     // If guest user, use -1 as the user ID
     const userId = currentUser ? currentUser.uid : -1;
     const fileExtension = image.name.split('.').pop();
-    
+
     const uploadTask = storage.ref(`images/${userId}/${englishName}.${fileExtension}`).put(image);
-    
+
     uploadTask.on(
       "state_changed",
       (snapshot) => {
@@ -125,7 +125,6 @@ export const ReactFirebaseFileUpload = () => {
               size="xs"
               disabled={isFormValid()}
               type="submit">
-              {/* style={{backgroundColor: '#4E48E7'}}>  */}
               Upload </Button>
 
       <Sitting

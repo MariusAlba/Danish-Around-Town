@@ -50,7 +50,7 @@ export const Flipcard = (props) => {
     fetchTranslations().then((listOfFilenameAndUrl) => {
       // Set the translation array
       setList(listOfFilenameAndUrl);
-      // Yep, we are done fetching, in case no images loaded, this field will help 
+      // Yep, we are done fetching, in case no images loaded, this field will help
       // us distinquishing between no images while fetching, and no images when done fetching.
       setDoneLoading(true);
   })
@@ -77,7 +77,7 @@ export const Flipcard = (props) => {
   const isImageLimitReached = imageId >= translations.length;
   const isImageIdPositive = imageId > 1;
 
-  // In case that no images are fetched, either due to load 
+  // In case that no images are fetched, either due to load
   // in progress or no images found at all, we display a text and navigation options
   if (translations[0]===undefined) {
       return (
@@ -88,7 +88,7 @@ export const Flipcard = (props) => {
             <h3 className="mb-5">
               No images found, kindly upload some images.
             </h3>
-          )}  
+          )}
         </div>
       );
    }
@@ -125,7 +125,7 @@ export const Flipcard = (props) => {
 
           <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
             <div className="flipcard_container mt-5">
-            
+
               <img
                 className="flipcard_container"
                 src={`${translations[imageId - 1].url}`
@@ -141,18 +141,7 @@ export const Flipcard = (props) => {
             </div>
 
             <div className="flipcard_container flipText mt-5">
-              <div
-                // style={{
-                //   backgroundColor: "rgb(78, 72, 231, 1)",
-                //   height: 500,
-                //   width: 700,
-                //   color: "#fff",
-                //   display: "flex",
-                //   justifyContent: "center",
-                //   alignItems: "center",
-                //   fontSize: "100px",
-                // }}
-              >
+              <div>
                 {translations[imageId - 1].filename}
               </div>
 
@@ -186,21 +175,6 @@ export const Flipcard = (props) => {
           </svg>
         </Link>
       )}
-      {/* <Link to="/Menu">  */}
-        {/* <svg
-          width="3em"
-          height="3em"
-          viewBox="0 0 16 16"
-          className="bi bi-arrow-left-circle-fill backArrow"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            filleRule="evenodd"
-            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"
-          />
-        </svg> */}
-      {/* </Link> */}
     </div>
   );
 };

@@ -15,7 +15,6 @@ export const NotLoggedInScreen = () => {
       <Button onClick={handleSignIn} className="logInButton" variant="success" size="lg" type="submit" >
         Sign in with Google
         </Button>
-      {/* <button onClick={handleSignIn}>Sign in with Google</button> */}
     </div>
   );
 };

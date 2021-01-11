@@ -6,7 +6,6 @@ import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
 import Profile from "./Profile";
 import PrivateRoute from "./PrivateRoute"
-// import { LoginForm, Password, User } from "./LogIn";
 import { AccountCreated } from "./AccountCreated";
 import { Intro } from "./Intro";
 import { Menu } from "./Menu";
