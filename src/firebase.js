@@ -13,13 +13,7 @@ import "firebase/storage";
     appId: "1:745353892274:web:7e0a96ee449d035edb94ab",
     measurementId: "G-RG7E0KTPXF"
   };
-  // Initialize Firebase
-  // firebase.initializeApp(firebaseConfig);
-  // firebase.analytics();
 
-// const fire = firebase.initializeApp(firebaseConfig);
-
-// export default fire;
 
 
 export const firebaseApp = firebase.initializeApp(firebaseConfig);

@@ -51,13 +51,6 @@ export default function Profile() {
                 </Button>
           </Link>
         </div>
-        {/* <div className="col-lg-12">
-          <Link to="/Intro">
-          <Button className="mBt mb-5" variant="success" size="lg" type="submit">
-              My Vocabulary
-          </Button>
-          </Link>
-        </div> */}
         <div className="col-lg-12">
             <Button onClick={handleLogout} className="mBt mb-3" variant="info" size="md" type="submit">
                Logout
