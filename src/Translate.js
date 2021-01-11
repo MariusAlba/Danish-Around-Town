@@ -9,8 +9,13 @@ const languages = [
     value: "af",
   },
   {
+
     label: "Arabic",
     value: "ar",
+  },
+  {
+    label: "Afrikaans",
+    value: "af",
   },
   {
     label: "Hindi",
