@@ -13,6 +13,13 @@ const languages = [
     value: "ar",
   },
   {
+<<<<<<< Updated upstream
+=======
+    label: "Afrikaans",
+    value: "af",
+  },
+  {
+>>>>>>> Stashed changes
     label: "Hindi",
     value: "hi",
   },
