@@ -5,10 +5,13 @@ import Convert from "./Convert"
 
 const languages = [
   {
+<<<<<<< Updated upstream
     label: "Afrikaans",
     value: "af",
   },
   {
+=======
+>>>>>>> Stashed changes
     label: "Arabic",
     value: "ar",
   },
