@@ -31,9 +31,6 @@ function App() {
           <Route path="/NotLoggedInScreen" exact component={NotLoggedInScreen} />
           <Route path="/AccountCreated" exact component={AccountCreated} />
           <Route path="/Menu" exact component={Menu} />
-
-          <Route path="/UploadImg" exact component={ReactFirebaseFileUpload} />
-          <Route path="/Flipcard" exact component={Flipcard} />
           <Route path="/Translate" exact component={Translate} />
 
           <AuthProvider>
