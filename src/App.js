@@ -6,13 +6,12 @@ import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
 import Profile from "./Profile";
 import PrivateRoute from "./PrivateRoute"
-// import { LoginForm, Password, User } from "./LogIn";
 import { AccountCreated } from "./AccountCreated";
 import { Intro } from "./Intro";
 import { Menu } from "./Menu";
 import { ReactFirebaseFileUpload } from "./UploadImg";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
+import Translate from "./Translate";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { firebaseAppAuth } from "./firebase";
 import { LoggedInScreen } from "./LoggedInScreen";
@@ -32,12 +31,14 @@ function App() {
           <Route path="/NotLoggedInScreen" exact component={NotLoggedInScreen} />
           <Route path="/AccountCreated" exact component={AccountCreated} />
           <Route path="/Menu" exact component={Menu} />
-          <Route path="/UploadImg" exact component={ReactFirebaseFileUpload} />
-          <Route path="/Flipcard" exact component={Flipcard} />
+          <Route path="/Translate" exact component={Translate} />
+
           <AuthProvider>
             <Route path="/login" exact component={LogIn} />
             <Route path="/SignUp" exact component={SignUp} />
             <Route path="/ForgotPassword" exact component={ForgotPassword} />
+            <Route path="/UploadImg" exact component={ReactFirebaseFileUpload} />
+            <Route path="/Flipcard" exact component={Flipcard} />
             <PrivateRoute path="/Profile" exact component={Profile} />
             <PrivateRoute path="/UpdateProfile" exact component={UpdateProfile} />
           </AuthProvider>
