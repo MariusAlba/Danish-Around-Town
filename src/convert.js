@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import axios from "axios"
 import qs from "qs"
 
-// de-structure language and text props
+// De-structure language and text props
 const Convert = ({ language, text }) => {
   const [results, setResults] = useState("")
 
