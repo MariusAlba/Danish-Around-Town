@@ -6,6 +6,7 @@ import "./App.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Backbutton from "./Backbutton";
+import Profileicon from "./Profileicon";
 import { ReactComponent as Camera } from "./img/camera.svg";
 import { ReactComponent as Sitting } from "./img/sitting.svg";
 
@@ -85,15 +86,11 @@ export const ReactFirebaseFileUpload = () => {
   return (
   <div>
       <Backbutton />
-
+      <Profileicon />
       <div>
-      <Container>
-      <h3 className="mb-5">
-
-        Upload daily Danish signs you see, and review them in Flipcard
-      </h3>
+      <Container  style={{ marginTop: "50px", marginLeft: "10px"}}>
+      <h3 className="mb-5">Upload daily Danish signs you see and review them in flipcards.</h3>
       </Container>
-
       {/* {url} */}
       <Container fluid>
         <Card bg="#4E48E7" text="white" className="text-center p-3" style={{backgroundColor: '#4E48E7'}}>

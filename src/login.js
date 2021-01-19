@@ -32,9 +32,9 @@ export default function LogIn() {
     <>
       <BackbuttonToIntro />
       <Container
-        className="d-flex align-items-center justify-content-center"
+        className="d-flex align-items-center justify-content-center" style={{ marginTop: "30px"}}
       >
-        <Card className="w-100 border-0" style={{ maxWidth: "400px" }}>
+        <Card className="w-100 border-0" style={{ maxWidth: "300px" }}>
           <Card.Body>
             <h2 className="text-center mb-4">Log In</h2>
             {error && <Alert variant="danger">{error}</Alert>}
