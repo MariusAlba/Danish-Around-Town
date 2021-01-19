@@ -32,7 +32,7 @@ export default function LogIn() {
     <>
       <BackbuttonToIntro />
       <Container
-        className="d-flex align-items-center justify-content-center" style={{ marginTop: "30px"}}
+        className="d-flex align-items-center justify-content-center mt-5"
       >
         <Card className="w-100 border-0" style={{ maxWidth: "300px" }}>
           <Card.Body>

@@ -120,7 +120,7 @@ export const Flipcard = (props) => {
           </svg>
         </Link>
       )}
-      <div className="row">
+      <div className="row mt-5">
         <div className="col-lg-12" align="center">
 
           <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
