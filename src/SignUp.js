@@ -36,11 +36,11 @@ export default function SignUp() {
 
   return (
     <>
-      <BackbuttonToIntro />
       <Container
-        className="d-flex align-items-center justify-content-center"
+        className="d-flex align-items-center justify-content-center" style={{ marginTop: "30px"}}
       >
-        <Card className="w-100 border-0" style={{ maxWidth: "400px" }}>
+        <BackbuttonToIntro />
+        <Card className="w-100 border-0" style={{ maxWidth: "300px" }}>
           <Card.Body>
             <h2 className="text-center mb-4">Sign Up</h2>
             {error && <Alert variant="danger">{error}</Alert>}
