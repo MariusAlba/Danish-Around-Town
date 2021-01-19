@@ -15,7 +15,7 @@ body {
 
 span {
   color: #03DAC6;
-  font-family: 'Karla', sans-serif;  
+  font-family: 'Karla', sans-serif;
 }
 
 .user {
@@ -47,7 +47,7 @@ span {
   background-color: rgb(78, 72, 231, 1);
   border-radius: 1rem;
   width: 18ch;
-  font-family: 'Karla', sans-serif;  
+  font-family: 'Karla', sans-serif;
 }
 
 .login {
@@ -68,14 +68,6 @@ span {
     transform: rotate(360deg);
   }
 }
-
-/* Container needed to position the button. Adjust the width as needed */
-/* .flipcard_container { */
-  /* position: fixed; */
-  /* width: 100%; */
-  /* margin-bottom: auto; */
-  /* padding: 50px; */
-/* } */
 
 /* Make the image responsive */
 .flipcard_container img {
@@ -143,7 +135,7 @@ span {
 .cartoonCenter {
   display: block;
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
   justify-content: flex-end;
 }
 
@@ -168,9 +160,9 @@ span {
   padding: 20px;
   border: 1px solid #999;
   overflow: auto;
-  font-family: 'Karla', sans-serif;  
+  font-family: 'Karla', sans-serif;
 
-  
+
 }
 
 .close-icon {

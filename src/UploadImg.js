@@ -6,6 +6,7 @@ import "./App.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Backbutton from "./Backbutton";
+import Profileicon from "./Profileicon";
 import { ReactComponent as Camera } from "./img/camera.svg";
 import { ReactComponent as Sitting } from "./img/sitting.svg";
 
@@ -13,6 +14,7 @@ import { Container, Col, Row } from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
 import './App.css';
 import { useAuth } from "./contexts/AuthContext"
+import Popup from "./Popup";
 
 
 export const ReactFirebaseFileUpload = () => {
@@ -20,8 +22,13 @@ export const ReactFirebaseFileUpload = () => {
   const [englishName, setEnglishName] = useState("");
   const [url, setUrl] = useState("");
   const [progress, setProgress] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
 
   const { currentUser } = useAuth()
+
 
   // Ensure that the file is chosen, and the english text is entered,
   // before activating the upload button
@@ -45,8 +52,8 @@ export const ReactFirebaseFileUpload = () => {
     // If guest user, use -1 as the user ID
     const userId = currentUser ? currentUser.uid : -1;
     const fileExtension = image.name.split('.').pop();
-
     const uploadTask = storage.ref(`images/${userId}/${englishName}.${fileExtension}`).put(image);
+
 
     uploadTask.on(
       "state_changed",
@@ -54,8 +61,8 @@ export const ReactFirebaseFileUpload = () => {
         const progress = Math.round(
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         );
-        setProgress(progress);
-      },
+        setProgress(progress);},
+
       (error) => {
         console.log(error);
       },
@@ -66,7 +73,10 @@ export const ReactFirebaseFileUpload = () => {
           .getDownloadURL()
           .then((url) => {
             setUrl(url);
-          });
+          },
+
+        setIsOpen(!isOpen)
+        );
       }
     );
   };
@@ -76,15 +86,11 @@ export const ReactFirebaseFileUpload = () => {
   return (
   <div>
       <Backbutton />
-
+      <Profileicon />
       <div>
-      <Container>
-      <h3 className="mb-5">
-
-        Upload daily Danish signs you see and review them in Flipcard
-      </h3>
+      <Container  style={{ marginTop: "50px", marginLeft: "10px"}}>
+      <h3 className="mb-5">Upload daily Danish signs you see and review them in flipcards.</h3>
       </Container>
-
       {/* {url} */}
       <Container fluid>
         <Card bg="#4E48E7" text="white" className="text-center p-3" style={{backgroundColor: '#4E48E7'}}>
@@ -106,19 +112,22 @@ export const ReactFirebaseFileUpload = () => {
     <div>
       <Container>
       <Form.Group>
-      <Form.Control size="lg" name="englishName" type="text" placeholder="Enter English" onChange={handleChange}/>
+      <Form.Control size="lg" name="englishName" type="text" placeholder="Enter English" onChange={handleChange} />
       </Form.Group>
       </Container>
     </div>
-
+  
     <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
       <i>Upload Progress</i>
     </div>
-
+    
+    {/* Percentage should be here */}
     <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
       <progress value={progress} max="100" />
+      <p> {progress}% </p>
     </div>
 
+    {/* Upload button */}
     <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
       <Button onClick={handleUpload}
               className="mBt mb-3"
@@ -126,7 +135,20 @@ export const ReactFirebaseFileUpload = () => {
               disabled={isFormValid()}
               type="submit">
               Upload </Button>
-
+      {isOpen && (
+        <Popup
+        content={
+          <>
+          <p>
+            Upload successfully. {"\n"}
+            Click "X" to contiune upload.
+          </p>
+          </>
+        }
+        handleClose={togglePopup}
+        />
+      )}
+      {/* Cartoon */}
       <Sitting
         className="cartoonRight"
         height="100px"

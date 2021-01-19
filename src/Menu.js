@@ -12,7 +12,7 @@ export const Menu = () => {
 
   return (
     <div
-    className="container App">
+    className="container App" style={{ marginTop: "40px" }}>
       <Profileicon />
       <span>
       <h1 className="mb-6">
@@ -33,7 +33,7 @@ export const Menu = () => {
           >
             <Button
               className="mBt mb-4"
-              variant="success"
+              variant="info"
               size="md"
               type="submit"
             >
@@ -58,7 +58,7 @@ export const Menu = () => {
           <Link to="/UploadImg">
             <Button
               className="mBt mb-4"
-              variant="success"
+              variant="info"
               size="md"
               type="submit"
             >
