@@ -6,7 +6,6 @@ import { Link, useHistory } from "react-router-dom"
 import BackbuttonToIntro from "./BackbuttonToIntro";
 
 export default function SignUp() {
-  const usernameRef = useRef()
   const emailRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()
@@ -45,10 +44,6 @@ export default function SignUp() {
             <h2 className="text-center mb-4">Sign Up</h2>
             {error && <Alert variant="danger">{error}</Alert>}
             <Form onSubmit={handleSubmit}>
-              <Form.Group controlId="formUsername">
-                <Form.Label>Username *</Form.Label>
-                <Form.Control type="username" placeholder="Username" ref={usernameRef} required />
-              </Form.Group>
               <Form.Group controlId="formEmail">
                 <Form.Label>Email *</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" ref={emailRef} required />
@@ -58,7 +53,7 @@ export default function SignUp() {
                 <Form.Control type="password" placeholder="Enter password" ref={passwordRef} required />
               </Form.Group>
               <Form.Group controlId="formPasswordConfirm">
-                <Form.Label>Password *</Form.Label>
+                <Form.Label>Confirm Password *</Form.Label>
                 <Form.Control type="password" placeholder="Enter password again" ref={passwordConfirmRef} required />
               </Form.Group>
               <div className="text-center">

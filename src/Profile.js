@@ -53,7 +53,7 @@ export default function Profile() {
         </div>
         <div className="col-lg-12">
             <Button onClick={handleLogout} className="mBt mb-3" variant="info" size="md" type="submit">
-               Logout
+               Log Out
             </Button>
         </div>
       </div>
