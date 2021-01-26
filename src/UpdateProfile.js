@@ -62,7 +62,7 @@ export default function UpdateProfile() {
                 <Form.Control type="password" placeholder="Leave blank to keep the same" ref={passwordRef} required />
               </Form.Group>
               <Form.Group controlId="formPasswordConfirm">
-                <Form.Label>Password</Form.Label>
+                <Form.Label>Confirm Password</Form.Label>
                 <Form.Control type="password" placeholder="Leave blank to keep the same" ref={passwordConfirmRef} required />
               </Form.Group>
               <div className="text-center">

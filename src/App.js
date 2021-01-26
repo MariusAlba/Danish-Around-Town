@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
 import LogIn from "./login";
 import SignUp from "./SignUp";
@@ -12,10 +12,6 @@ import { Menu } from "./Menu";
 import { ReactFirebaseFileUpload } from "./UploadImg";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Translate from "./Translate";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { firebaseAppAuth } from "./firebase";
-import { LoggedInScreen } from "./LoggedInScreen";
-import { NotLoggedInScreen } from "./NotLoggedInScreen";
 import { Flipcard } from "./Flipcard";
 import { AuthProvider } from "./contexts/AuthContext";
 
@@ -27,12 +23,9 @@ function App() {
 
         <Switch>
           <Route path="/" exact component={Intro} />
-          {/* <Route path="/LoggedInScreen" exact component={LoggedInScreen} /> */}
-          <Route path="/NotLoggedInScreen" exact component={NotLoggedInScreen} />
           <Route path="/AccountCreated" exact component={AccountCreated} />
           <Route path="/Menu" exact component={Menu} />
           <Route path="/Translate" exact component={Translate} />
-
           <AuthProvider>
             <Route path="/login" exact component={LogIn} />
             <Route path="/SignUp" exact component={SignUp} />
